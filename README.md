@@ -53,13 +53,12 @@ func main() {
 	
 	基础支撑层：负责最基础的功能支撑，包括连接管理、事务管理、配置加载和缓存处理，这些都是共用的东西，
 	将他们抽取出来作为最基础的组件。为上层的数据处理层提供最基础的支撑。
-### How to use (netty-rpc-test)
-1. Define an interface:
+##3.工作流程与功能介绍
+### 3.1初始化
     ```  
-    public interface HelloService { 
-        String hello(String name); 
-        String hello(Person person);
-    }
+	连接比较简单，直接调用 rorm.Open 传入数据库地址即可
+	db,err:=gorm.Open("mysql", "root:root@(127.0.0.1:3306)/db1")
+	实际上支持基本上所有主流的关系数据库，连接方式上略有不
     ```  
 2. Implement the interface with annotation @NettyRpcService:
     ```  
