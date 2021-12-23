@@ -44,6 +44,7 @@ func main() {
 	     不需要自己编写复杂的SQL语句，也不需要封装复杂的数据底层，能够赋能开发人员将宝贵的时间与精力放在业务逻辑构建上。
 ## 2.总体架构:
 ![design](https://raw.githubusercontent.com/rabbitcch/rorm/main/123.png)
+
 	汇联RORM的功能架构分为三层：
 	API接口层：提供给外部使用的接口API，开发人员通过这些本地API来操纵数据库。
 	接口层一接收到调用请求就会调用数据处理层来完成具体的数据处理。
